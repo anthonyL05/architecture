@@ -12,7 +12,7 @@ declare(strict_types=1);
 namespace App\Domaine\Service;
 
 
-class Invoce
+interface Invoce
 {
-
+    public function retriveInvoceWith(int $getlimit, int $getOffsets): \App\Domaine\Collection\Invoce;
 }
