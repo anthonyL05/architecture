@@ -13,6 +13,8 @@ namespace App\Infrastructure\Repository;
 
 
 
+use App\Domaine\Collection\Invoce;
+
 interface InvoceRepositoryInterface
 {
 
@@ -20,5 +22,5 @@ interface InvoceRepositoryInterface
     /**
      * @return array
      */
-     public function findAll(): array;
+     public function findAll(): Invoce;
 }

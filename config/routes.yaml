@@ -1,3 +1,6 @@
 index:
     path: /
     controller: App\Ui\Action\Home::handle
+indexhtml:
+    path: /html
+    controller: App\Ui\Action\HomeHtml::handle

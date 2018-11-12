@@ -7,23 +7,28 @@
  */
 
 declare(strict_types= 1);
+
 namespace App\Infrastructure\Repository;
+
+
 
 
 use App\Domaine\Entity\Invoce;
 use App\Infrastructure\ValueObject\Uuid;
 
-
 final class InvoceRepository implements InvoceRepositoryInterface
 {
 
-
     /**
-     * @return array
+     * @return Invoce
      * @throws \Exception
      */
-    public function findAll(): array
+    public function findAll(): \App\Domaine\Collection\Invoce
     {
-        return [ Uuid::uuid4(), new \DateTimeImmutable()];
+        return new \App\Domaine\Collection\Invoce(...[
+            new Invoce(Uuid::uuid4(), new \DateTimeImmutable()),
+            new Invoce(Uuid::uuid4(), new \DateTimeImmutable()),
+            new Invoce(Uuid::uuid4(), new \DateTimeImmutable()),
+        ]);
     }
 }
