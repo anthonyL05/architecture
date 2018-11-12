@@ -8,10 +8,10 @@
 
 declare(strict_types=1);
 
-namespace App\Action;
+namespace App\Ui\Action;
 
 
-use App\Repository\InvoceRepositoryInterface;
+use App\Infrastructure\Repository\InvoceRepositoryInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 

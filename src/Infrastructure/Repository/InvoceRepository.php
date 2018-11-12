@@ -7,11 +7,12 @@
  */
 
 declare(strict_types= 1);
-namespace App\Repository;
+namespace App\Infrastructure\Repository;
 
 
-use App\Entity\Invoce;
-use Ramsey\Uuid\Uuid;
+use App\Domaine\Entity\Invoce;
+use App\Infrastructure\ValueObject\Uuid;
+
 
 final class InvoceRepository implements InvoceRepositoryInterface
 {
@@ -23,6 +24,6 @@ final class InvoceRepository implements InvoceRepositoryInterface
      */
     public function findAll(): array
     {
-        return [ new Invoce(Uuid::uuid4(), new \DateTimeImmutable())];
+        return [ Uuid::uuid4(), new \DateTimeImmutable()];
     }
 }
